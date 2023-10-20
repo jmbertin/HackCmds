@@ -1,13 +1,19 @@
 # HackCmds
 Collection of useful penetration testing and hacking commands.
 
-[Aller à "Ma Section"](#privilege-escalation)
-[Aller à "Ma Section"](#privilege-escalation)
-
+## INDEX :
+- [Port enumeration](#port-enumeration)
+- [Gobuster Directory Enumeration](#gobuster-directory-enumeration)
+- [Metasploit](#metasploit)
+- [SQLMAP](#sqlmap)
+- [Crack with john](#crack-with-john)
+- [Local Server](#local-server)
+- [SSH](#ssh)
+- [Hydra Brute Force](#hydra-brute-force)
 
 ----
 
-## Scanning
+## Port enumeration
 - Quick Scan (Only Ports)
 ````
 rustscan -g --ulimit 5000 -a 192.168.31.113
