@@ -89,9 +89,9 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 find / -perm +6000 2>/dev/null | grep '/bin/'
 ````
 
-- Usefull link :
+- Usefull links :
 
-[GTFOBINS](https://gtfobins.github.io/)
+- [GTFOBINS](https://gtfobins.github.io/)
 
 ---
 
