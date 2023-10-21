@@ -161,6 +161,7 @@ john <OUTPUT_FILE> --wordlist=<WORDLIST>
 ````
 
 - Shadow
+
 Copy passwd and shadow file to local computer, then :
 ````
 unshadow passwd shadow > password.txt
