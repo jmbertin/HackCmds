@@ -296,6 +296,11 @@ tar -xvf <archive.tar>
 echo $(command)
 ````
 
+- Locate a file by name
+````
+locate <FILENAME>
+````
+
 ----
 
 # Steganography
