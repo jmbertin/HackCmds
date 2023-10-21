@@ -153,6 +153,13 @@ zip2john tocrack.zip > hash.txt
 john hash.txt
 ````
 
+- RSA Passphrase
+````
+python3 ssh2john <FILE> > <OUTPUT_FILE>
+john <OUTPUT_FILE>
+john <OUTPUT_FILE> --wordlist=<WORDLIST>
+````
+
 ----
 
 ## Local Server
