@@ -256,6 +256,13 @@ hydra -l <FOUND_USERNAME> -P <WORDLIST> <TARGET_IP> http-post-form "/wp-login.ph
 ````
 hydra -l chris -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt ftp://10.10.17.164 -V -I
 ````
+
+- SSH
+````
+hydra -l <USER> -P <WORDLIST> <IP> ssh -t 4 -V
+````
+
+
 ----
 
 ## SMB
