@@ -2,7 +2,7 @@
 Collection of useful penetration testing and hacking commands.
 
 ## INDEX :
-- [Nikto vulnerability scanner](#nikto-vulnerability-scanner)
+- [Vulnerability scanner](#vulnerability-scanners)
 - [Port enumeration](#port-enumeration)
 - [Gobuster Directory Enumeration](#gobuster-directory-enumeration)
 - [Metasploit](#metasploit)
@@ -23,7 +23,7 @@ Collection of useful penetration testing and hacking commands.
 
 ----
 
-## Vulnerability scanner
+## Vulnerability scanners
 
 - Nikto
 ````
