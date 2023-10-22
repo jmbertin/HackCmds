@@ -2,6 +2,7 @@
 Collection of useful penetration testing and hacking commands.
 
 ## INDEX :
+- [Nikto vulnerability scanner](#nikto-vulnerability-scanner)
 - [Port enumeration](#port-enumeration)
 - [Gobuster Directory Enumeration](#gobuster-directory-enumeration)
 - [Metasploit](#metasploit)
@@ -19,6 +20,13 @@ Collection of useful penetration testing and hacking commands.
 - [Hash-identifier](#hash-identifier)
 - [LFI](#lfi)
 - [Bash reverse shell](#bash-reverse-shell)
+
+----
+
+## Nikto vulnerability scanner
+````
+nikto -h <IP>
+````
 
 ----
 
