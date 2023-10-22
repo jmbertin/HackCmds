@@ -23,9 +23,21 @@ Collection of useful penetration testing and hacking commands.
 
 ----
 
-## Nikto vulnerability scanner
+## Vulnerability scanner
+
+- Nikto
 ````
 nikto -h <IP>
+````
+
+- Wapiti
+````
+wapiti <URL> -n <FORCE 1 to 3>
+````
+
+- ZAP
+````
+./zap
 ````
 
 ----
