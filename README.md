@@ -309,6 +309,11 @@ echo $(command)
 locate <FILENAME>
 ````
 
+- Launch sudo with another user :
+````
+sudo -u <OTHER_USER> <COMMAND>
+````
+
 ----
 
 # Steganography
