@@ -335,6 +335,8 @@ hash-id -h <HASH>
 
 [HASHES.COM](https://hashes.com/en/decrypt/hash)
 
+[CrackStation](https://crackstation.net/)
+
 ----
 
 # LFI
