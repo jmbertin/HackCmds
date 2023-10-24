@@ -285,7 +285,8 @@ hydra -l <FOUND_USERNAME -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt -
 ## SMB
 
 ````
-enum4linux -U -G -S -P <cible>
+enum4linux -U -G -S -P <IP>
+enum4linux -a <IP>
 ````
 
 - Get share names :
@@ -361,6 +362,11 @@ locate <FILENAME>
 - Launch sudo with another user :
 ````
 sudo -u <OTHER_USER> <COMMAND>
+````
+
+- Checking security on binary
+````
+checksec <BINARY>
 ````
 
 ----
