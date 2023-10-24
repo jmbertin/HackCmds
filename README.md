@@ -28,6 +28,7 @@ Collection of useful penetration testing and hacking commands.
 - Nikto
 ````
 nikto -h <IP>
+nikto -h <IP> -id <USERNAME>:<PASSWORD>
 ````
 
 - Wapiti
