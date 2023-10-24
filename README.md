@@ -298,6 +298,11 @@ smbclient //<IP>/<SHARE_NAME>
 get <FILENAME>
 ````
 
+- Upload a file
+````
+put <FILENAME>
+````
+
 - Other commands
 ````
 ls, 
