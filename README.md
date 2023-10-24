@@ -15,7 +15,7 @@ Collection of useful penetration testing and hacking commands.
 - [Hydra Brute Force](#hydra-brute-force)
 - [SMB](#smb)
 - [Stabilize shell](#stabilize-shell)
-- [Usefull bash commands](#ssefull-bash-commands)
+- [Usefull bash commands](#usefull-bash-commands)
 - [Steganography](#steganography)
 - [Hash-identifier](#hash-identifier)
 - [LFI](#lfi)
