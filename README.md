@@ -342,6 +342,11 @@ export TERM=xterm-256-color
 
 - Find file
 ````
+sudo find / -type f -name "*.txt" -exec grep -H "flag" {} \; 2>/dev/null
+````
+
+- Find file
+````
 find / -type f -name "file.txt" 2>/dev/null
 ````
 
