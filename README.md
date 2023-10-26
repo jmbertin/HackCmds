@@ -20,6 +20,20 @@ Collection of useful penetration testing and hacking commands.
 - [Hash-identifier](#hash-identifier)
 - [LFI](#lfi)
 - [Bash reverse shell](#bash-reverse-shell)
+- [NFS](#nfs)
+
+----
+
+## NFS
+
+- Enumerate share
+````
+showmount -e [IP]
+````
+- Mount a share
+````
+sudo mount -t nfs IP:share /tmp/mount/ -nolock
+````
 
 ----
 
