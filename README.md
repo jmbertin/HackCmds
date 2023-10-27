@@ -209,6 +209,11 @@ john password.txt --wordlist=<WORDLIST>
 
 ````
 
+- Try to guess password from Username (format should be USERNAME:HASH)
+````
+john --single --format=Raw-MD5 <HASHFILE>
+````
+
 ----
 
 ## Local Server
