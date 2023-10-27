@@ -397,6 +397,11 @@ sudo -u <OTHER_USER> <COMMAND>
 checksec <BINARY>
 ````
 
+- Recursive search of a term in files
+````
+grep -r <TOFIND>
+````
+
 ----
 
 # Steganography
