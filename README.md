@@ -23,6 +23,19 @@ Collection of useful penetration testing and hacking commands.
 - [NFS](#nfs)
 - [Socat](#socat)
 - [Powershell reverse shell](#windows-reverse-shell)
+- [Crunch](#crunch)
+
+----
+
+# Crunch 
+
+Password combinaison generator
+````
+crunch <MIN_LENGTH> <MAX_LENGTH> -o <OUTPUT_FILE>
+crunch <MIN_LENGTH> <MAX_LENGTH> -f /usr/share/crunch/charset.lst <CHARSET_NAME> -o <OUTPUT_FILE>
+crunch <MIN_LENGTH> <MAX_LENGTH> -t <PATTERN> -o <OUTPUT_FILE>
+
+````
 
 ----
 
