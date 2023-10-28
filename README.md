@@ -21,6 +21,7 @@ Collection of useful penetration testing and hacking commands.
 - [LFI](#lfi)
 - [Bash reverse shell](#bash-reverse-shell)
 - [NFS](#nfs)
+- [Socat](#socat)
 
 ----
 
