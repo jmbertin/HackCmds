@@ -159,9 +159,14 @@ set <EXPLOIT NAME>
 run
 ````
 
-Usefull exploit :
-- mysql_hashdump
-- mysql_schemadump
+- Usefull exploit :
+  - mysql_hashdump
+  - mysql_schemadump
+
+- Usefull commands
+````
+load powershell
+````
 
 ----
 
