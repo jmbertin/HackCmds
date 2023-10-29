@@ -166,6 +166,7 @@ run
 - Usefull commands
 ````
 load powershell
+powershell_shell
 ````
 
 ----
