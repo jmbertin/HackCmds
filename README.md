@@ -28,12 +28,61 @@ Collection of useful penetration testing and hacking commands.
 ----
 
 ## Recon
+
+### Gathering general infos
 ````
 whois: A tool used to query databases to obtain domain or IP ownership information, registration details, and administrative contacts.
 dig (Domain Information Groper): A DNS lookup utility often used to query DNS servers for various DNS records.
 nslookup: A program to query Internet domain name servers to obtain domain name or IP address mappings.
 host: A simple DNS lookup utility typically used to perform domain to IP lookups and vice versa.
 traceroute/tracert: A diagnostic tool that displays the route taken by packets through a network to reach a specific destination, showing each hop along the way.
+````
+
+### Google search
+````
+site:<SITEADDRESS> filetype:<EXTENSION>
+site:<SITEADDRESS> <KEYWORD_IN_FILE>
+````
+
+### Specialyzed search site
+````
+[ViewDNS.info](https://viewdns.info/) -> lot of tools (whois, history...)
+[Threat Intelligence Platform](https://threatintelligenceplatform.com/) -> Completed web analyze
+[Shodan](https://www.shodan.io/) -> Passive reconnaissance (geographical location of the IP address, open ports,...)
+````
+
+### OSINT
+**recon-ng**
+
+- Open a new workplace
+````
+recon-ng -w <WORKPLACE_NAME>
+````
+
+- Seeding the Database
+````
+db insert domains
+````
+
+- Work with module
+````
+marketplace search KEYWORD to search for available modules with keyword.
+marketplace info MODULE to provide information about the module in question.
+marketplace install MODULE to install the specified module into Recon-ng.
+marketplace remove MODULE to uninstall the specified module.
+````
+
+- Work with modules
+````
+modules search to get a list of all the installed modules
+modules load MODULE to load a specific module to memory
+````
+
+- To run a module
+````
+options list to list the options that we can set for the loaded module.
+options set <option> <value> to set the value of the option.
+run
 ````
 
 ----
