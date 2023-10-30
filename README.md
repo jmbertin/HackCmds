@@ -453,6 +453,11 @@ checksec <BINARY>
 grep -r <TOFIND>
 ````
 
+- Add host to hostfile
+````
+echo "<IP> <HOSTNAME>" | sudo tee -a  /etc/hosts
+````
+
 ----
 
 # Steganography
