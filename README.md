@@ -27,6 +27,17 @@ Collection of useful penetration testing and hacking commands.
 
 ----
 
+## Recon
+````
+whois: A tool used to query databases to obtain domain or IP ownership information, registration details, and administrative contacts.
+dig (Domain Information Groper): A DNS lookup utility often used to query DNS servers for various DNS records.
+nslookup: A program to query Internet domain name servers to obtain domain name or IP address mappings.
+host: A simple DNS lookup utility typically used to perform domain to IP lookups and vice versa.
+traceroute/tracert: A diagnostic tool that displays the route taken by packets through a network to reach a specific destination, showing each hop along the way.
+````
+
+----
+
 # Crunch 
 
 Password combinaison generator
