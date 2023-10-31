@@ -328,8 +328,15 @@ C:\Windows\system32\sysprep.inf
 C:\Windows\system32\sysprep\sysprep.xml
 C:\inetpub\wwwroot\web.config
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
+````
+
+- Usefull commands
+````
+
 type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
 reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s
+schtasks -> equiv to crontab
+icacls -> equiv to chmod
 ````
 
 - Powershell history
