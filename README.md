@@ -90,10 +90,8 @@ run
 Find subdomain by bruteforce
 ````
 dnsrecon -t brt -d <DOMAIN>
-````
-or
-````
 sublist3r.py -d <DOMAIN>
+./ffuf -w <WORDLIST> -H "Host: FUZZ.<DOMAIN>" -u http://<IP> -fs <SIZE_TO_IGNORE>
 ````
 
 ----
