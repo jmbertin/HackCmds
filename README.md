@@ -85,6 +85,12 @@ options set <option> <value> to set the value of the option.
 run
 ````
 
+### DNS Recon
+Find subdomain by bruteforce
+````
+dnsrecon -t brt -d <DOMAIN>
+````
+
 ----
 
 # Crunch 
