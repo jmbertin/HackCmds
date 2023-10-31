@@ -90,6 +90,10 @@ Find subdomain by bruteforce
 ````
 dnsrecon -t brt -d <DOMAIN>
 ````
+or
+````
+sublist3r.py -d <DOMAIN>
+````
 
 ----
 
