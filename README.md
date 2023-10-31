@@ -42,6 +42,7 @@ traceroute/tracert: A diagnostic tool that displays the route taken by packets t
 ````
 site:<SITEADDRESS> filetype:<EXTENSION>
 site:<SITEADDRESS> <KEYWORD_IN_FILE>
+site:*.<DOMAIN>
 ````
 
 ### Specialyzed search site
