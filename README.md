@@ -552,6 +552,11 @@ find / -perm +6000 2>/dev/null | grep '/bin/'
 tar -xvf <archive.tar>
 ````
 
+- List enabled capabilities
+````
+getcap -r / 2>/dev/null
+````
+
 - Bypass command filtration
 ````
 echo $(command)
