@@ -606,6 +606,11 @@ export TERM=xterm-256-color
 
 ## Usefull bash commands
 
+- Find file with SUID set
+````
+find / -perm -u=s -type f 2>/dev/null
+````
+
 - Find writable folder
 ````
 find / -writable 2>/dev/null
