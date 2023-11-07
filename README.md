@@ -240,6 +240,12 @@ sudo gobuster dir -w <WORDLIST> -u <TARGET IP> -r
 ````
 sudo gobuster dir -u http://<TARGET IP>/ -w <WORDLIST> -x <EXTENSIONS>
 ````
+
+- Vhosts enumeration
+````
+gobuster vhost -u <HOST>-w /SecLists/Discovery/DNS/subdomains-top1million-20000.txt --exclude-length <LENGTH>
+````
+
 ----
 
 ## Metasploit
@@ -748,6 +754,9 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.8.187.
 
 
 # TO INCORPORATE
+
+- Use john to generate password variations
+./john --wordlist=/home/jbertin/Bureau/pass.txt --rules=jumbo --stdout > /home/jbertin/Bureau/pass1.txt
 
 # WPScan
 ````
