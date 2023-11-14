@@ -623,6 +623,11 @@ export TERM=xterm-256-color
 find / -perm -u=s -type f 2>/dev/null
 ````
 
+- Find file with SUID set or SETGID set
+````
+find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+````
+
 - Find writable folder
 ````
 find / -writable 2>/dev/null
